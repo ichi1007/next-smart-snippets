@@ -2,6 +2,7 @@
   "name": "next-smart-snippets",
   "displayName": "Next Smart Snippets",
   "description": "Smart snippets for Next.js with automatic imports and client component setup.",
+  "publisher": "ichi",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.100.0"
