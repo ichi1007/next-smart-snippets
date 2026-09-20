@@ -1,0 +1,46 @@
+{
+  "name": "next-smart-snippets",
+  "displayName": "Next Smart Snippets",
+  "description": "Smart snippets for Next.js",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescriptreact",
+    "onLanguage:javascriptreact"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nextSmartSnippets.hello",
+        "title": "Next Smart Snippets: Hello"
+      }
+    ],
+    "configuration": {
+      "title": "Next Smart Snippets",
+      "properties": {
+        "nextSmartSnippets.restrictFileSpecificSnippets": {
+          "type": "boolean",
+          "default": true,
+          "description": "Only show file-specific snippets such as nxpage, nxlayout and nxapi in their corresponding Next.js files."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.6",
+    "@types/vscode": "^1.100.0",
+    "@vscode/vsce": "^4.0.0",
+    "typescript": "^5.9.0"
+  }
+}
