@@ -1,37 +1,35 @@
 {
   "name": "next-smart-snippets",
   "displayName": "Next Smart Snippets",
-  "description": "Smart snippets for Next.js",
+  "description": "Smart snippets for Next.js with automatic imports and client component setup.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.100.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ichi1007/next-smart-snippets"
+  },
+  "license": "MIT",
+  "keywords": [
+    "nextjs",
+    "next.js",
+    "snippets",
+    "typescript",
+    "javascript",
+    "react",
+    "app-router"
+  ],
   "categories": [
-    "Other"
+    "Snippets"
   ],
   "activationEvents": [
     "onLanguage:typescriptreact",
-    "onLanguage:javascriptreact"
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:javascript"
   ],
   "main": "./dist/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "nextSmartSnippets.hello",
-        "title": "Next Smart Snippets: Hello"
-      }
-    ],
-    "configuration": {
-      "title": "Next Smart Snippets",
-      "properties": {
-        "nextSmartSnippets.restrictFileSpecificSnippets": {
-          "type": "boolean",
-          "default": true,
-          "description": "Only show file-specific snippets such as nxpage, nxlayout and nxapi in their corresponding Next.js files."
-        }
-      }
-    }
-  },
   "scripts": {
     "build": "tsc -p .",
     "watch": "tsc -w -p .",
